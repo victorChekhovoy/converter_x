@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.user.project_x.Area">
+    <Spinner
+        android:text = "select a type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="43dp"
+        android:id="@+id/from_type_b" />
+
+    <TextView
+        android:id="@+id/textView2_b"
+        android:layout_width="100pt"
+        android:layout_height="10pt"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="141dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:hint="result"
+        android:text="" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2_b"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:id="@+id/spinner_b"/>
+
+    <EditText
+        android:id="@+id/editText_b"
+        android:layout_width="100pt"
+        android:layout_height="10pt"
+        android:layout_alignLeft="@+id/textView2_b"
+        android:layout_alignStart="@+id/textView2_b"
+        android:layout_below="@+id/from_type_b"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/rectangle"
+        android:ems="10"
+        android:hint="enter number"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center" />
+    <Button
+        android:text="RUN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/run_b" />
+</RelativeLayout>
