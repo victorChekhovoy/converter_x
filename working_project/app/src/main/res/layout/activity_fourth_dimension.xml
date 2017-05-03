@@ -14,53 +14,55 @@
     tools:context="com.example.user.project_x.Fourth_dimension">
 
     <Spinner
-        android:text = "select a type"
+        android:id="@+id/from_type_f"
         android:layout_width="match_parent"
         android:layout_height="15pt"
         android:layout_alignParentTop="true"
         android:layout_marginTop="43dp"
-        android:id="@+id/from_type_f" />
+        android:background="@drawable/gradient_spinner"
+        android:text="select a type" />
 
     <TextView
         android:id="@+id/textView2_f"
-        android:layout_width="120pt"
-        android:layout_height="15pt"
+        android:layout_width="130pt"
+        android:layout_height="25pt"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="141dp"
+        android:layout_marginBottom="140dp"
         android:background="@drawable/rectangle"
         android:gravity="center"
         android:hint="result"
         android:text=""
-        android:textSize="20sp"/>
+        android:textSize="36sp"/>
 
     <Spinner
+        android:id="@+id/spinner_f"
         android:layout_width="match_parent"
         android:layout_height="15pt"
         android:layout_above="@+id/textView2_f"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="47dp"
-        android:id="@+id/spinner_f"/>
+        android:background="@drawable/gradient_spinner" />
 
     <EditText
-        android:background="@drawable/rectangle"
-        android:layout_width="120pt"
-        android:layout_height="15pt"
-        android:inputType="textPersonName"
-        android:layout_marginTop="49dp"
         android:id="@+id/editText_f"
+        android:background="@drawable/rectangle"
+        android:layout_width="130pt"
+        android:layout_height="25pt"
+        android:inputType="textPersonName"
+        android:layout_marginTop="41dp"
         android:selectAllOnFocus="true"
         android:hint="enter number"
-        android:textSize="23sp"
+        android:textSize="36sp"
         android:textAlignment="center"
         android:layout_below="@+id/from_type_f"
         android:layout_alignLeft="@+id/textView2_f"
-        android:layout_alignStart="@+id/textView2_f" />
+        android:layout_alignStart="@+id/textView2_f"/>
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="50pt"
-        android:layout_height="50pt"
+        android:layout_width="55pt"
+        android:layout_height="55pt"
         app:srcCompat="@drawable/images"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

@@ -89,7 +89,7 @@ public class Temperature extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ((TextView) parent.getChildAt(0)).setTextSize(20);
                 from = data[position];
-                Check a = new Check();
+                Check1 a = new Check1();
                 if(i<1){i+=1;}
                 else{
                 if(a.check(input) && input.length()>=1){
@@ -117,7 +117,7 @@ public class Temperature extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 ((TextView) parent.getChildAt(0)).setTextSize(20);
                 to = data[position];
-                Check a = new Check();
+                Check1 a = new Check1();
                 if(j<1){j+=1;}
                 else{
                 if(a.check(input) && input.length()>=1){
