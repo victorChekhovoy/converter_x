@@ -28,6 +28,7 @@ public class Temperature extends AppCompatActivity {
     static TextView answer;
     static int i=0;
     static int j=0;
+    static int z=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,14 +56,20 @@ public class Temperature extends AppCompatActivity {
                 input = (in.getText()).toString();
                 Check1 a = new Check1();
                 if(a.check(input) && input.length()>=1){
-                    if(input.equals(".") && input.length()<2){
-                        Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
+                    if((input.equals(".") && input.length()<2)||(input.equals(".-") && input.length()<3)||(input.equals("-.") && input.length()<3)||(input.substring(input.length()-1).equals("-") && input.length()>2)){
+                        if(z>input.length()){}
+                        else{Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
+                        z=input.length();
+                        }
                     }
                     else if(input.equals("-") && input.length()<2){}
                     else{Temp_convetrer(types.get(from), types.get(to), input);}}
                 else{
-                    if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
-                    else{answer.setText("result");}}
+                    if(!(a.check(input)) && input.length()>=1){
+                        if(z>input.length()){}
+                        else{Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}}
+                    else{answer.setText("result");}
+                    z=input.length();}
             }
         });}
 
@@ -93,13 +100,13 @@ public class Temperature extends AppCompatActivity {
                 if(i<1){i+=1;}
                 else{
                 if(a.check(input) && input.length()>=1){
-                    if(input.equals(".") && input.length()<2){
+                    if((input.equals(".") && input.length()<2)||(input.equals(".-") && input.length()<3)||(input.equals("-.") && input.length()<3)||(input.equals("-") && !(input.length()<2))){
                         Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
                     }
                     else if(input.equals("-") && input.length()<2){}
                     else{Temp_convetrer(types.get(from), types.get(to), input);}}
                 else{
-                    if(!(a.check(input)) && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
+                    if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
                     else{answer.setText("result");}}
 
             }}
@@ -121,7 +128,7 @@ public class Temperature extends AppCompatActivity {
                 if(j<1){j+=1;}
                 else{
                 if(a.check(input) && input.length()>=1){
-                    if(input.equals(".") && input.length()<2){
+                    if((input.equals(".") && input.length()<2)||(input.equals(".-") && input.length()<3)||(input.equals("-.") && input.length()<3||(input.equals("-") && !(input.length()<2)))){
                         Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
                     }
                     else if(input.equals("-") && input.length()<2){}

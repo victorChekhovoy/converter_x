@@ -32,6 +32,7 @@ public class Area extends AppCompatActivity{
     static TextView answer;
     static int i=0;
     static int j=0;
+    static int z=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,12 +55,20 @@ public class Area extends AppCompatActivity{
                 Check a = new Check();
                 if(a.check(input) && input.length()>=1){
                     if(input.equals(".") && input.length()<2){
-                        Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
+                        if(z>input.length()){}
+                        else{Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
+                            z=input.length();
+                        }
                     }
+                    else if(input.equals("-") && input.length()<2){}
                     else{Area_convetrer(from, to, input);}}
                 else{
-                    if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
-                    else{answer.setText("result");}}}
+                    if(!(a.check(input)) && input.length()>=1){
+                        if(z>input.length()){}
+                        else{Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}}
+                    else{answer.setText("result");}
+                    z=input.length();}
+            }
         });
 }
     @Override
