@@ -19,8 +19,8 @@ import android.widget.Toast;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class Fourth_dimension extends AppCompatActivity {
-    String[] data = {"milliseconds","seconds", "minutes", "hours", "days", "weeks", "months with 30 days", "Non Leap years"};
+public class Energy extends AppCompatActivity {
+    String[] data = {"joules","kilojoules", "megajoules", "horsepowers hour", "calories", "kilokalories", "megakalories", "kilowatts hour","watts hour","watts second","electronvolt"};
     Map<String, Double> types = new TreeMap<>();
     static String from = "";
     static String to = "";
@@ -33,12 +33,12 @@ public class Fourth_dimension extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fourth_dimension);
+        setContentView(R.layout.activity_energy);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
         type_init();
-        answer = (TextView)findViewById(R.id.textView2_f);
+        answer = (TextView)findViewById(R.id.textView2_e);
         answer.setText("result");
-        final EditText in = (EditText)findViewById(R.id.editText_f);
+        final EditText in = (EditText)findViewById(R.id.editText_e);
         spinner_from_init(adapter);
         spinner_to_init(adapter);
         in.addTextChangedListener(new TextWatcher() {
@@ -64,7 +64,7 @@ public class Fourth_dimension extends AppCompatActivity {
                         }
                     }
                     else if(input.equals("-") && input.length()<2){}
-                    else{Fourth_convetrer(from, to, input);}}
+                    else{Energy_convetrer(from, to, input);}}
                 else{
                     if(!(a.check(input)) && input.length()>=1){
                         if(z>input.length()){}
@@ -80,17 +80,20 @@ public class Fourth_dimension extends AppCompatActivity {
         super.onStart();
     }
     void type_init(){
-        types.put("milliseconds", 0.001);
-        types.put("seconds", 1.0);
-        types.put("minutes", 60.0);
-        types.put("hours", 3600.0);
-        types.put("days", 86400.0);
-        types.put("weeks", 604800.0);
-        types.put("months with 30 days", 2592000.0);
-        types.put("Non Leap years", 31536000.0);
+        types.put("joules", 1.0);
+        types.put("kilojoules", 1000.0);
+        types.put("megajoules", 1000000.0);
+        types.put("horsepowers hour", 2685000.0);
+        types.put("calories", 4.187);
+        types.put("kilokalories", 4187.0);
+        types.put("megakalories", 4187000.0);
+        types.put("kilowatts hour", 3600000.0);
+        types.put("watts hour", 3600.0);
+        types.put("watts second", 1.0);
+        types.put("electronvolt", 0.000000000000000000162);
     }
     void spinner_from_init(ArrayAdapter a){
-        Spinner from_spinner = (Spinner) findViewById(R.id.from_type_f);
+        Spinner from_spinner = (Spinner) findViewById(R.id.from_type_e);
         from_spinner.setAdapter(a);
         from_spinner.setPrompt("Select type");
         from_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -101,22 +104,22 @@ public class Fourth_dimension extends AppCompatActivity {
                 Check a = new Check();
                 if(i<1){i+=1;}
                 else{
-                if(a.check(input) && input.length()>=1){
-                    if(input.equals(".") && input.length()<2){
-                        Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
-                    }
-                    else{Fourth_convetrer(from, to, input);}}
-                else{
-                    if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
-                    else{answer.setText("result");}}
-            }}
+                    if(a.check(input) && input.length()>=1){
+                        if(input.equals(".") && input.length()<2){
+                            Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
+                        }
+                        else{Energy_convetrer(from, to, input);}}
+                    else{
+                        if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
+                        else{answer.setText("result");}}
+                }}
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });}
     void spinner_to_init(ArrayAdapter a){
-        Spinner to_spinner = (Spinner)findViewById(R.id.spinner_f);
+        Spinner to_spinner = (Spinner)findViewById(R.id.spinner_e);
         to_spinner.setAdapter(a);
         to_spinner.setPrompt("Select type");
         to_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -127,22 +130,22 @@ public class Fourth_dimension extends AppCompatActivity {
                 Check a = new Check();
                 if(j<1){j+=1;}
                 else{
-                if(a.check(input) && input.length()>=1){
-                    if(input.equals(".") && input.length()<2){
-                        Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
-                    }
-                    else{Fourth_convetrer(from, to, input);}}
-                else{
-                    if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
-                    else{answer.setText("result");}}
-            }}
+                    if(a.check(input) && input.length()>=1){
+                        if(input.equals(".") && input.length()<2){
+                            Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();
+                        }
+                        else{Energy_convetrer(from, to, input);}}
+                    else{
+                        if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
+                        else{answer.setText("result");}}
+                }}
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
     }
-    void Fourth_convetrer(String from, String to, String amount){
+    void Energy_convetrer(String from, String to, String amount){
         double from_amount = Double.parseDouble(amount);
         double to_amount = types.get(from)*from_amount/types.get(to);
         if(to_amount%1 == 0){long myInt = (long) to_amount;

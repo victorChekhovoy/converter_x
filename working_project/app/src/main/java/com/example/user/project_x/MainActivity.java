@@ -56,6 +56,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Fourth_dimension.class));
             }
         });
+        Button energy = (Button)findViewById(R.id.energy);
+        energy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Energy.class));
+            }
+        });
+        Button currency = (Button)findViewById(R.id.currency);
+        currency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Energy.class));
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

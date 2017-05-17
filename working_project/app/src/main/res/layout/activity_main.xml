@@ -48,9 +48,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/temp"
         android:layout_alignBaseline="@+id/mass"
-        android:layout_alignBottom="@+id/mass"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView" />
+        android:layout_alignBottom="@+id/mass" />
 
     <Button
         android:id="@+id/fourth"
@@ -71,5 +69,23 @@
         android:layout_alignBottom="@+id/fourth"
         android:layout_alignLeft="@+id/area"
         android:layout_alignStart="@+id/area" />
+    <Button
+        android:id="@+id/energy"
+        android:layout_width="60pt"
+        android:layout_height="wrap_content"
+        android:text="Energy"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/fourth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/currency"
+        android:layout_width="60pt"
+        android:layout_height="wrap_content"
+        android:text="Currency"
+        android:layout_alignBaseline="@+id/energy"
+        android:layout_alignBottom="@+id/energy"
+        android:layout_alignLeft="@+id/volume"
+        android:layout_alignStart="@+id/volume" />
 
 </RelativeLayout>

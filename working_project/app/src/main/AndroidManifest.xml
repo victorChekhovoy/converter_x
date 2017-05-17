@@ -7,7 +7,9 @@
         android:icon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:label="Converter" >
+        <activity
+            android:name=".MainActivity"
+            android:label="Converter">
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,20 +17,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Area" android:screenOrientation="portrait"
-            android:label="Area"/>
-        <activity android:name=".Mass" android:screenOrientation="portrait"
-            android:label="Mass"/>
-        <activity android:name=".Length" android:screenOrientation="portrait"
-            android:label="Length"/>
-        <activity android:name=".Temperature" android:screenOrientation="portrait"
-            android:label="Temperature"/>
-        <activity android:name=".Fourth_dimension" android:screenOrientation="portrait"
-            android:label="Time"/>
-        <activity android:name=".Volume" android:screenOrientation="portrait"
-            android:label="Volume"/>
-        <activity android:name=".Authors" android:screenOrientation="portrait"
-            android:label="Authors"/>
+        <activity
+            android:name=".Area"
+            android:label="Area"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Mass"
+            android:label="Mass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Length"
+            android:label="Length"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Temperature"
+            android:label="Temperature"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fourth_dimension"
+            android:label="Time"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Volume"
+            android:label="Volume"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Authors"
+            android:label="Authors"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Energy"
+            android:label="@string/title_activity_energy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Currency"
+            android:label="@string/title_activity_currency"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
