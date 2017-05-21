@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.project_x">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
@@ -47,11 +50,15 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Energy"
-            android:label="@string/title_activity_energy"
+            android:label="Energy"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Currency"
-            android:label="@string/title_activity_currency"
+            android:name=".CurrencyConvert"
+            android:label="Currency"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Help"
+            android:label="Help"
             android:screenOrientation="portrait" />
     </application>
 

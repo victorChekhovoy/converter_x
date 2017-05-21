@@ -8,5 +8,9 @@
         android:orderInCategory="100"
         android:title="Authors"
         app:showAsAction="never"/>
-
+    <item
+        android:id="@+id/action_3"
+        android:orderInCategory="100"
+        android:title="Help"
+        app:showAsAction="never"/>
 </menu>

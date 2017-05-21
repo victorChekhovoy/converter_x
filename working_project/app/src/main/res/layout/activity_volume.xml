@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_volume"
+    android:id="@+id/activity_area"
     android:screenOrientation="portrait"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,45 +22,55 @@
         android:background="@drawable/gradient_spinner"
         android:text="select a type" />
 
-    <TextView
-        android:id="@+id/textView2_v"
+    <HorizontalScrollView
+        android:scrollbarThumbHorizontal="@null"
+        android:scrollbarThumbVertical="@null"
+        android:id="@+id/scrollView"
         android:layout_width="130pt"
         android:layout_height="25pt"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/imageView3"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="140dp"
-        android:background="@drawable/rectangle"
-        android:gravity="center"
-        android:hint="@string/result"
-        android:text=""
-        android:textSize="36sp" />
+        android:layout_marginBottom="19dp"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/textView2_v"
+            android:layout_width="130pt"
+            android:layout_height="25pt"
+            android:layout_marginBottom="140dp"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:hint="result"
+            android:scrollHorizontally="true"
+            android:textSize="36sp" />
+    </HorizontalScrollView>
 
     <Spinner
         android:id="@+id/spinner_v"
         android:layout_width="match_parent"
         android:layout_height="15pt"
-        android:layout_above="@+id/textView2_v"
+        android:layout_above="@+id/scrollView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="47dp"
         android:background="@drawable/gradient_spinner" />
 
     <EditText
         android:id="@+id/editText_v"
+        android:background="@drawable/rectangle"
         android:layout_width="130pt"
         android:layout_height="25pt"
-        android:layout_alignLeft="@+id/textView2_v"
-        android:layout_alignStart="@+id/textView2_v"
-        android:layout_below="@+id/from_type_v"
-        android:layout_marginTop="41dp"
-        android:background="@drawable/rectangle"
-        android:hint="enter number"
         android:inputType="textPersonName"
+        android:layout_marginTop="41dp"
         android:selectAllOnFocus="true"
+        android:hint="enter number"
+        android:textSize="36sp"
         android:textAlignment="center"
-        android:textSize="36sp" />
+        android:layout_below="@+id/from_type_v"
+        android:layout_alignLeft="@+id/scrollView"
+        android:layout_alignStart="@+id/scrollView" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView3"
         android:layout_width="55pt"
         android:layout_height="55pt"
         app:srcCompat="@drawable/volume"
@@ -68,3 +78,4 @@
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
+

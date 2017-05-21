@@ -6,19 +6,20 @@
     android:screenOrientation="portrait"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.project_x.Authors">
+    tools:context="com.example.user.project_x.Help">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="349dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_width="351dp"
+        android:layout_height="138dp"
         android:layout_marginLeft="40pt"
         android:layout_marginRight="15pt"
-        android:text="    This program was created by Dmytro Ivakhnenkov and Victor Checkhovoy."
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="    Instructions for converting units in this application: 1)input some number in the top field; 2)select from the top dropdown list the specific unit type from what you want to convert and from the bottom dropdown list the specific unit type to what you want to convert."
         android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="1dp" />
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="-1dp" />
 
 </android.support.constraint.ConstraintLayout>
+

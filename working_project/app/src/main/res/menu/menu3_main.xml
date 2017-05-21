@@ -9,9 +9,9 @@
         android:title="Back"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/action_3"
+        android:id="@+id/action_2"
         android:orderInCategory="100"
-        android:title="Help"
+        android:title="Authors"
         app:showAsAction="never"/>
 
 </menu>

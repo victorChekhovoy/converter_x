@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         currency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Energy.class));
+                startActivity(new Intent(MainActivity.this, CurrencyConvert.class));
             }
         });
     }
@@ -82,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_2:
                 Intent intent = new Intent(this, Authors.class);
                 startActivity(intent);
+                return true;
+            case R.id.action_3:
+                Intent intent2 = new Intent(this, Help.class);
+                startActivity(intent2);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

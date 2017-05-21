@@ -1,12 +1,10 @@
 package com.example.user.project_x;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -107,7 +105,7 @@ public class Area extends AppCompatActivity{
                     }
                     else{Area_convetrer(from, to, input);}}
                 else{
-                    if(a.check(input)==false && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
+                    if(!a.check(input) && input.length()>=1){Toast.makeText(getApplicationContext(), "bad symbols", Toast.LENGTH_SHORT).show();}
                     else{answer.setText("result");}}
 
             }}
@@ -166,6 +164,10 @@ public class Area extends AppCompatActivity{
             case R.id.action_2:
                 Intent intent1 = new Intent(this, Authors.class);
                 startActivity(intent1);
+                return true;
+            case R.id.action_3:
+                Intent intent2 = new Intent(this, Help.class);
+                startActivity(intent2);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

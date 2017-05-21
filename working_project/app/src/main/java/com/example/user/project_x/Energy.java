@@ -170,6 +170,10 @@ public class Energy extends AppCompatActivity {
                 Intent intent1 = new Intent(this, Authors.class);
                 startActivity(intent1);
                 return true;
+            case R.id.action_3:
+                Intent intent2 = new Intent(this, Help.class);
+                startActivity(intent2);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
