@@ -1,6 +1,8 @@
 package com.example.user.project_x;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -20,7 +22,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Energy extends AppCompatActivity {
-    String[] data = {"joules","kilojoules", "megajoules", "horsepowers hour", "calories", "kilokalories", "megakalories", "kilowatts hour","watts hour","watts second","electronvolt"};
+    String[] data = {"joules","kilojoules", "megajoules", "horsepowers hour", "calories", "kilocalories", "megacalories", "kilowatts hour","watts hour","watts second","electronvolt"};
     Map<String, Double> types = new TreeMap<>();
     static String from = "";
     static String to = "";
@@ -77,21 +79,22 @@ public class Energy extends AppCompatActivity {
     protected void onStart() {
         i=0;
         j=0;
+        input= "";
         super.onStart();
     }
-    void type_init(){
-        types.put("joules", 1.0);
-        types.put("kilojoules", 1000.0);
-        types.put("megajoules", 1000000.0);
-        types.put("horsepowers hour", 2685000.0);
-        types.put("calories", 4.187);
-        types.put("kilokalories", 4187.0);
-        types.put("megakalories", 4187000.0);
-        types.put("kilowatts hour", 3600000.0);
-        types.put("watts hour", 3600.0);
-        types.put("watts second", 1.0);
-        types.put("electronvolt", 0.000000000000000000162);
-    }
+   void type_init(){
+       types.put("joules", 1.0);
+       types.put("kilojoules", 1000.0);
+       types.put("megajoules", 1000000.0);
+       types.put("horsepowers hour", 2685000.0);
+       types.put("calories", 4.187);
+       types.put("kilocalories", 4187.0);
+       types.put("megacalories", 4187000.0);
+       types.put("kilowatts hour", 3600000.0);
+       types.put("watts hour", 3600.0);
+       types.put("watts second", 1.0);
+       types.put("electronvolt", 0.000000000000000000162);
+   }
     void spinner_from_init(ArrayAdapter a){
         Spinner from_spinner = (Spinner) findViewById(R.id.from_type_e);
         from_spinner.setAdapter(a);

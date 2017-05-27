@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="one">One</string>
+    <string name="in">In</string>
+    <string name="equal">Is Equal To</string>
+    <string name="result">Click Calculate for Result</string>
+    <string name="calculate">Calculate</string>
+    <string name="powered">Powered By Yahoo! Finance</string>
+
+    <string name="app_name">CurrencyConverter</string>
+    <string-array name="name">
+        <item>US Dollar</item>
+        <item>European Union Euro</item>
+        <item>Canadian Dollar</item>
+        <item>Australian Dollar</item>
+        <item>Ukrainian Hryvna</item>
+    </string-array>
+    <string-array name="value">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>CAD</item>
+        <item>AUD</item>
+        <item>UAH</item>
+    </string-array>
+    <string name="title_activity_help">Інструкція по використанню</string>
+    <string name="title_activity_number_systems">NumberSystems</string>
+    <string name="button_area">Площа</string>
+    <string name="button_currency">Валюта</string>
+    <string name="button_energy">Енергія</string>
+    <string name="button_length">Довжина</string>
+    <string name="button_mass">Маса</string>
+    <string name="button_temperature">Температура</string>
+    <string name="button_time">Час</string>
+    <string name="button_volume">Об\'єм</string>
+    <string name="valuee1">Джоулі</string>
+    <string name="valuee10">Ват за секунду</string>
+    <string name="valuee11">Електронвольти</string>
+    <string name="valuee2">Кілоджоулі</string>
+    <string name="valuee3">Мегаджоулі</string>
+    <string name="valuee4">Кінські сили на годину</string>
+    <string name="valuee5">Калорії</string>
+    <string name="valuee6">Кілокалорії</string>
+    <string name="valuee7">Мегакалорії</string>
+    <string name="valuee8">Кіловати на годину</string>
+    <string name="valuee9">Вати на годину</string>
+</resources>

@@ -78,6 +78,7 @@ public class Temperature extends AppCompatActivity {
     protected void onStart() {
         i=0;
         j=0;
+        input= "";
         super.onStart();
     }
 

@@ -1,12 +1,20 @@
 package com.example.user.project_x;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
+import java.util.Currency;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Energy.class));
             }
         });
+
         Button currency = (Button)findViewById(R.id.currency);
         currency.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu1_main, menu);

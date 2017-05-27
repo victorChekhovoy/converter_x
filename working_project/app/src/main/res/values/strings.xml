@@ -24,4 +24,24 @@
         <item>UAH</item>
     </string-array>
     <string name="title_activity_help">Help</string>
+    <string name="title_activity_number_systems">NumberSystems</string>
+    <string name="button_temperature">Temperature</string>
+    <string name="button_time">Time</string>
+    <string name="button_length">Length</string>
+    <string name="button_mass">Mass</string>
+    <string name="button_area">Area</string>
+    <string name="button_volume">Volume</string>
+    <string name="button_currency">Currency</string>
+    <string name="button_energy">Energy</string>
+    <string name="valuee1">joules</string>
+    <string name="valuee2">kilojoules</string>
+    <string name="valuee3">megajoules</string>
+    <string name="valuee4">horsepowers hour</string>
+    <string name="valuee5">calories</string>
+    <string name="valuee6">kilokalories</string>
+    <string name="valuee7">megakalories</string>
+    <string name="valuee8">kilowatts hour</string>
+    <string name="valuee9">watts hour</string>
+    <string name="valuee10">watts second</string>
+    <string name="valuee11">electronvolts</string>
 </resources>

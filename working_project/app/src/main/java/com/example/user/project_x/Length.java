@@ -77,6 +77,7 @@ public class Length extends AppCompatActivity {
     protected void onStart() {
         i=0;
         j=0;
+        input= "";
         super.onStart();
     }
     void type_init(){

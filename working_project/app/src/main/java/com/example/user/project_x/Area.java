@@ -71,6 +71,7 @@ public class Area extends AppCompatActivity{
 }
     @Override
     protected void onStart() {
+        input= "";
         i=0;
         j=0;
         super.onStart();

@@ -82,6 +82,7 @@ public class CurrencyConvert extends AppCompatActivity {
     protected void onStart() {
         i=0;
         j=0;
+        input= "";
         super.onStart();
     }
     void spinner_from_init(ArrayAdapter a){
@@ -145,7 +146,6 @@ public class CurrencyConvert extends AppCompatActivity {
         ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
                 connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {
-
             String[] link = {"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22" + val[from] + val[to] + "%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback="};
             WebAction act = new WebAction();
             act.execute(link);
@@ -193,6 +193,8 @@ public class CurrencyConvert extends AppCompatActivity {
             }
             catch (NullPointerException n){
                 Toast.makeText(CurrencyConvert.this, "Failed to connect to Yahoo! Finance", Toast.LENGTH_SHORT).show();
+            }
+            catch(NumberFormatException e){
             }
         }}
     @Override
